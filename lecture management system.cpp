@@ -18,7 +18,7 @@ class lecture
 public:
 void getdetails()
 {
-    cout<<"number of lectures:";
+    cout<<"number of lecturers:";
     cin>>lecno;
     cout<<"name of lecturer:";
     cin>>lecname;
@@ -31,7 +31,7 @@ void getdetails()
 
 void display_details()
 {
-    cout<<"\nnumber of lectures:"<<lecno<<endl<<"lecturer Name:"<<lecname<<endl<<"subject Name:"<<subname<<endl<<"course Name:"<<couname<<endl;
+    cout<<"\nnumber of lecturers:"<<lecno<<endl<<"lecturer Name:"<<lecname<<endl<<"subject Name:"<<subname<<endl<<"course Name:"<<couname<<endl;
 }
 };
 
