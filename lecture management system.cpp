@@ -4,7 +4,7 @@ Data members:                   Data function:
 A)Name of the lecturer          A)To assign initial values
 B)Name of the subject           B)To add a lecture details
 C)Name of the course            C)To display name and lecture details
-D)Name of  the lecturers */
+D)Number of  the lecturers */
 
 #include<iostream>
 #include<string.h>
@@ -12,50 +12,50 @@ using namespace std;
 
 class lecture
 {
-	int lecno;
+    int lecno;
     string lecname,subname,couname;
     
 public:
-void setdetails()
+void getdetails()
 {
-	cout<<"Enter number of lecture: ";
+    cout<<"number of lectures:";
     cin>>lecno;
-    cout<<"Enter lecturer name: ";
+    cout<<"name of lecturer:";
     cin>>lecname;
-    cout<<"Enter subject name: ";
+    cout<<"name of subject:";
     cin>>subname;
-    cout<<"Enter course name: ";
+    cout<<"name of course:";
     cin>>couname;
     cout<<endl;
 }
 
-void getdetails()
+void display_details()
 {
-    cout<<"\nnumber of lecture:"<<lecno<<endl<<"lecturer Name:"<<lecname<<endl<<"subject Name:"<<subname<<endl<<"course Name:"<<couname<<endl;
+    cout<<"\nnumber of lectures:"<<lecno<<endl<<"lecturer Name:"<<lecname<<endl<<"subject Name:"<<subname<<endl<<"course Name:"<<couname<<endl;
 }
 };
 
-int main(int argc, char const *argv[])
+int main()
 {
     
-    int count;
+    int i=5;
     cout<<"Enter the total number of lecture: ";
-    cin>>count;
+    cin>>i;
 
-    if(count>0)
+    if(i>0)
     {
         
-        lecture lectureArray[count];
-        for(int i=0;i<count;i++)
+        lecture lectureArray[5];
+        for(int i=0;i<5;i++)
         {
             cout<<"-----lecture details------"<<endl;
-            lectureArray[i].setdetails();
+            lectureArray[i].getdetails();
         }
 
         cout<<"\n-----Display lecture detail-----"<<endl;
-        for(int i=0;i<count;i++)
+        for(int i=0;i<5;i++)
         {
-            lectureArray[i].getdetails();
+            lectureArray[i].display_details();
         }
     }
     else
